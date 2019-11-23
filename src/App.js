@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { store, persistor } from 'store';
+import { store, persistor } from './redux/store';
 import logo from './logo.svg';
 import './App.css';
 
