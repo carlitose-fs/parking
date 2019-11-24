@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import Container from 'react-bootstrap/Container';
 import { Provider } from 'react-redux';
 import { store, persistor } from './redux/store';
