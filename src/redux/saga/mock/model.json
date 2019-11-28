@@ -1,5 +1,6 @@
 {
   "vendor":{
+    "id": 1,
     "departureAirport":"Milano Malpensa",
     "map":"http://lorempixel.com/370/390",
     "features":[

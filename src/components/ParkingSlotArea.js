@@ -1,17 +1,22 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 export default function ParkingSlotArea() {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '15rem', height: '14rem' }}>
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>Prezzo 50€</Card.Title>
         <Card.Text>
-        Some quick example text to build on the card title and make up the bulk of
-        the card s content.
+          <ListGroup variant="flush">
+            <ListGroup.Item>
+                  Posto Auto coperto
+            </ListGroup.Item>
+            <ListGroup.Item>Assicurazione inclusa</ListGroup.Item>
+          </ListGroup>
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">Buy</Button>
       </Card.Body>
     </Card>
   );
