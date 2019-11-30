@@ -8,7 +8,7 @@ const getVendors = () => new Promise((resolve) => {
 });
 
 
-function* fetchVendorData() {
+export function* fetchVendorData() {
   try {
     const data = yield call(getVendors);
     yield put(vendorGetSuccess(data));

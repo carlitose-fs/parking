@@ -8,7 +8,7 @@ const getParkings = () => new Promise((resolve) => {
 });
 
 
-function* fetchParkingData() {
+export function* fetchParkingData() {
   try {
     const data = yield call(getParkings);
     yield put(parkingGetSuccess(data));
