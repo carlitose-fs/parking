@@ -18,6 +18,7 @@
     "@babel/plugin-proposal-optional-chaining": "^7.6.0",
     "@babel/preset-react": "^7.7.4",
     "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
     "babel-plugin-module-resolver": "^3.2.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-standard": "^3.0.1",
@@ -35,8 +36,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "./node_modules/jest/bin/jest.js -w=1 --testPathIgnorePatterns createDbPerformancesTest",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
