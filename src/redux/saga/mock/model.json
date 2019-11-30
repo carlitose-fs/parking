@@ -15,25 +15,25 @@
       "id":123,
       "indoor":false,
       "insurance":false,
-      "price":13.56
+      "price":13.00
     },
     {
       "id":456,
       "indoor":false,
       "insurance":true,
-      "price":18.99
+      "price":18.50
     },
     {
       "id":243,
       "indoor":true,
       "insurance":true,
-      "price":23.56
+      "price":23.75
     },
     {
       "id":700,
       "indoor":true,
       "insurance":false,
-      "price":16.49
+      "price":16.30
     }
   ],
   "dictionary":{

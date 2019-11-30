@@ -3,9 +3,12 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/actions';
 
 
 export default function ParkingSlotArea({ indoor, insurance, price }) {
+  const dispatch = useDispatch();
   return (
     <Card style={{ width: '15rem', height: '14rem' }}>
       <Card.Body>
@@ -25,7 +28,7 @@ export default function ParkingSlotArea({ indoor, insurance, price }) {
             {!insurance && 'Assicurazione esclusa'}
           </ListGroup.Item>
         </ListGroup>
-        <Button variant="primary">Buy</Button>
+        <Button onClick={() => { dispatch(addToCart(price)); }} variant="primary">Buy</Button>
       </Card.Body>
     </Card>
   );
