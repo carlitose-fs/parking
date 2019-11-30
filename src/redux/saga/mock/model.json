@@ -1,5 +1,5 @@
 {
-  "vendor":{
+  "vendors":[{
     "id": 1,
     "departureAirport":"Milano Malpensa",
     "map":"http://lorempixel.com/370/390",
@@ -10,7 +10,7 @@
       "Assistenza 24h",
       "Ripristino gratuito del calo batteria della tua auto"
     ]
-  },
+  }],
   "parkings":[
     {
       "id":123,
