@@ -2,7 +2,6 @@
   "vendors":[{
     "id": 1,
     "departureAirport":"Milano Malpensa",
-    "map":"http://lorempixel.com/370/390",
     "features":[
       "Posto auto della tipologia selezionata",
       "Aperto 7 giorni su 7",
@@ -16,25 +15,25 @@
       "id":123,
       "indoor":false,
       "insurance":false,
-      "price":"13.56 EUR"
+      "price":13.56
     },
     {
       "id":456,
       "indoor":false,
       "insurance":true,
-      "price":"18.99 EUR"
+      "price":18.99
     },
     {
       "id":243,
       "indoor":true,
       "insurance":true,
-      "price":"23.56 EUR"
+      "price":23.56
     },
     {
       "id":700,
       "indoor":true,
       "insurance":false,
-      "price":"16.49 EUR"
+      "price":16.49
     }
   ],
   "dictionary":{

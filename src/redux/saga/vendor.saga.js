@@ -1,5 +1,5 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { vendorGetSuccess, vendorGetFailed } from '../actions';
+import { vendorGetSuccess, vendorGetFail } from '../actions';
 import { GET_VENDOR_DATA } from '../actions/types';
 import json from './mock/model.json';
 
@@ -11,9 +11,9 @@ const getVendors = () => new Promise((resolve) => {
 function* fetchVendorData() {
   try {
     const data = yield call(getVendors);
-    yield put(vendorGetSuccess(data.data));
+    yield put(vendorGetSuccess(data));
   } catch (e) {
-    yield put(vendorGetFailed(e));
+    yield put(vendorGetFail(e));
   }
 }
 

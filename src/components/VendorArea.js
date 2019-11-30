@@ -4,10 +4,12 @@ import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import PropTypes from 'prop-types';
+
 import './VendorArea.css';
 
 
-export default function VendorArea() {
+export default function VendorArea({ departureAirport, features }) {
   const [show, setShow] = useState(false);
   return (
     <Card>
@@ -15,7 +17,9 @@ export default function VendorArea() {
 
         <Card.Body>
           <Card.Title className="row">
-          Prenota il tuo parcheggio a Milano Malpensa
+          Prenota il tuo parcheggio a
+            {' '}
+            {departureAirport}
           </Card.Title>
           {show && (
           <Card.Subtitle className="row">
@@ -26,15 +30,7 @@ export default function VendorArea() {
           <Row>
             <Card.Img src="park.png" className="col-5"></Card.Img>
             <ListGroup variant="flush" className="col-4">
-              <ListGroup.Item>
-                  Posto auto della tipologia selezionata
-              </ListGroup.Item>
-              <ListGroup.Item>Aperto 7 giorni su 7</ListGroup.Item>
-              <ListGroup.Item>Cassa presiedata 24h</ListGroup.Item>
-              <ListGroup.Item>Assistenza 24h</ListGroup.Item>
-              <ListGroup.Item>
-                  Ripristino gratuito del calo batteria della tua auto
-              </ListGroup.Item>
+              {features.map(f => (<ListGroup.Item>{f}</ListGroup.Item>))}
             </ListGroup>
           </Row>
           )}
@@ -53,3 +49,13 @@ export default function VendorArea() {
     </Card>
   );
 }
+
+VendorArea.propTypes = {
+  departureAirport: PropTypes.string,
+  features: PropTypes.arrayOf(PropTypes.string),
+};
+
+VendorArea.defaultProps = {
+  departureAirport: '',
+  features: [],
+};

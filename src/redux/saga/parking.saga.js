@@ -1,5 +1,5 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { parkingGetSuccess, parkingGetFailed } from '../actions';
+import { parkingGetSuccess, parkingGetFail } from '../actions';
 import { GET_PARKING_DATA } from '../actions/types';
 import json from './mock/model.json';
 
@@ -11,9 +11,9 @@ const getParkings = () => new Promise((resolve) => {
 function* fetchParkingData() {
   try {
     const data = yield call(getParkings);
-    yield put(parkingGetSuccess(data.data));
+    yield put(parkingGetSuccess(data));
   } catch (e) {
-    yield put(parkingGetFailed(e));
+    yield put(parkingGetFail(e));
   }
 }
 
